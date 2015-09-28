@@ -14,5 +14,6 @@ types of artificial neurons)
 		σ(z) = 1 / (1 + e^-z)
 		so if z = w . x + b, where x can take on any value on not just a binary enum
 		then σ(z) = 1 / (1 + e^-(w . x + b))
+		
 7:05pm.
 --
