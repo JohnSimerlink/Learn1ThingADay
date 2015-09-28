@@ -7,7 +7,7 @@ _Italics_ - surrond with "_"'s
 
 ###Headers - use # through ######. use 1 and 6 sparingly
 
-[Link](www.google.com) - use \[\text\]\(link\) syntax.
+[Link](www.google.com) - use \[text\]\(link\) syntax.
 
 [A reference/dynamic link][link1] - use [text][linkname] syntax and define link1 at the bottom of the page with a [linkname]: link syntax on its own line
 
