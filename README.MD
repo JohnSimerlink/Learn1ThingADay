@@ -8,7 +8,8 @@ Rules
 
 
 ####Daily Progress
-* Day One (09/27/2015)- Learned the basics of markdown
+* Day Two (09/28/2015) - Started Learning Neural Networks; perceptron, sigmoid
+* Day One (09/27/2015) - Learned the basics of markdown
 
 
 ####Future Ideas
