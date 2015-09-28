@@ -7,9 +7,9 @@ _Italics_ - surrond with "_"'s
 
 ###Headers - use # through ######. use 1 and 6 sparingly
 
-[Link](www.google.com) - use []() syntax.
+[Link](www.google.com) - use \[\text\]\(link\) syntax.
 
-[An Internal Link][link1] - use [text][linkname] syntax and define link1 at the bottom of the page with a [linkname]: link syntax on its own line
+[A reference/dynamic link][link1] - use [text][linkname] syntax and define link1 at the bottom of the page with a [linkname]: link syntax on its own line
 
 
 Make images with regular link or internal (aka "reference" link) link syntax, but by placing a "!" before the intial []
@@ -29,13 +29,6 @@ This is an ordered list:
 2. two
 3. three
 
-One way to add text below each item in list is to put a space before that line
-
-1. Item 1
-  this is some text below item 1
-2. item 2
- this is some text below item 2
-
 Another way is to use two spaces at the end of the numbered line as explained in the hard/soft breaks section below
 
 1. item 1  
@@ -45,4 +38,6 @@ the above line ends in two spaces
 Hard Breaks/Soft breaks - One line break between two lines won't create a new paragraph. Two line breaks will, however, it will put an extra space between the two paragprahs. To simply start a new line use a soft break by adding two spaces at the end of the line  
 ^^That is how this line is directly below the above line, whereas my previous lines are all separated like individual parapraphs.
 
-[link1]: www.facebook.com
+escape special characters with "\"
+
+[link1]: http://www.facebook.com
