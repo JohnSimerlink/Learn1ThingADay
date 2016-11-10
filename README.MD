@@ -12,7 +12,7 @@ Rules
 * Day One (09/27/2015) - Learned the basics of markdown
 * Days XX-XX - Learned stuff - got lost on laptop that crashed. will recover laptop eventually
 * Day "Twenty" (06/07/2016) - Made a dotfiles install script for switching laptops/servers
-
+* Day "TwentyTwo" (11/10/2016) - Working on implementing sorting algorithmsq
 ####Future Ideas
 * Forking and branching and pull requests in github
 * Functional Programming
