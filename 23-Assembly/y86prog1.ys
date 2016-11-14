@@ -1,0 +1,11 @@
+irmovl $55, %edx
+rrmovl %edx, %ebx
+irmovl Array, %eax
+rmmovl %ebx,4(%eax)
+mrmovl 0(%eax), %ecx
+halt
+
+.align 4
+Array:
+.long 0x6f
+.long 0x84
