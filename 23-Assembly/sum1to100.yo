@@ -1,0 +1,11 @@
+  0x000:              | .pos 0x0
+  0x000: 30f000000000 |   irmovl $0, %eax
+  0x006: 30f101000000 |   irmovl $1, %ecx
+  0x00c:              | Loop:
+  0x00c: 6010         |   addl %ecx, %eax
+  0x00e: 30f201000000 |   irmovl $1, %edx
+  0x014: 6021         |   addl %edx, %ecx
+  0x016: 30f20a000000 |   irmovl $10, %edx
+  0x01c: 6112         |   subl %ecx, %edx # if lim - num >= 0
+  0x01e: 750c000000   |   jge Loop #loop again
+  0x023: 00           |   halt

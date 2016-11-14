@@ -1,0 +1,11 @@
+.pos 0x0
+  irmovl $0, %eax
+  irmovl $1, %ecx
+Loop:
+  addl %ecx, %eax
+  irmovl $1, %edx
+  addl %edx, %ecx
+  irmovl $10, %edx
+  subl %ecx, %edx # if lim - num >= 0
+  jge Loop #loop again
+  halt
