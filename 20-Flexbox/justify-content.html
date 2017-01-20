@@ -1,0 +1,70 @@
+<div id='container'>
+  <p> justify-content: flex-start </p>
+  <div id='flex-start'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <p>justify-content: flex-end</p>
+  <div id='flex-end'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <p>justify-content: center</p>
+  <div id='center'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <p>justify-content: space-between</p>
+  <div id='space-between'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <p>justify-content: space-around</p>
+  <div id='space-around'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <p>justify-content: space-evenly</p>
+  <div id='space-evenly'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<style>
+  #container > div {
+    display: flex;
+    font-family: "Courier New", "Lucida Console", monospace;
+  }
+  #container > div > div {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(-45deg, #788cff, #b4c8ff);
+  }
+
+  #flex-start {
+    justify-content: flex-start;
+  }
+  #flex-end {
+    justify-content: flex-end;
+  }
+  #center {
+    justify-content: center;
+  }
+  #space-between {
+    justify-content: space-between;
+  }
+  #space-around {
+    justify-content: space-around;
+  }
+  #space-evenly {
+    justify-content: space-evenly;
+  }
+  /* space-evenly doesn't look support in any browsers according to mdn. so i'm not even sure what it's supposed to support */
+</style>
