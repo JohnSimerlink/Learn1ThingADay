@@ -1,6 +1,7 @@
 #include "linkedList.h"
 #include <stdio.h>
 void printInt(void * bits);
+void myFunc(int);
 
 int main() {
   void (*printInt_ptr)(void *);
@@ -17,7 +18,7 @@ int main() {
   insert(list, (void *) &num);
   insert(list, (void *) &num2);
   printf("%d", length(list));
-  print(list);
+/*  print(list);*/
 
 
 }
