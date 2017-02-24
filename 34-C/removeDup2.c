@@ -19,6 +19,7 @@ void print(NODE* head);
   struct linkedList {
     NODE * head;
     int size; /*numBytes*/
+    int length;
     void * comparatorFunction;
     void * printNodeFunction;
   }
@@ -31,14 +32,19 @@ LINKEDLIST * init(int nodeSize, void* comparator, void* printNode){
   list->comparator = comparatorFunction;
   list->printNodeFunction = printNode;
   list->head = NULL;
+  list->length = 0;
   return list;
 }
 int length(LINKEDLIST * list){
-
+  return list->length;
 }
-void insert(LINKEDLIST * lis , void * val){ /*Will work if HEAD is NULL*/
-  NODE * next = malloc(sizeof(NODE));
-  head
+void insert(LINKEDLIST * list, void * val){ /*Will work if HEAD is NULL*/
+  NODE * newNode = malloc(sizeof(NODE));
+  newNode->obj = val;
+  newNode->next = null;
+  NODE * tail = list->head+=sizeof(NODE)*(length-1);
+  tail->next = newNode;
+  list->length++;
  }
 NODE * deleteIndex(NODE * head, int index){
 }
@@ -49,5 +55,3 @@ void removeDuplicates(NODE * head){
 
 void print(NODE* head){
 }
-
-
