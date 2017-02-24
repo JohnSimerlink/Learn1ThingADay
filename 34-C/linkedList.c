@@ -20,12 +20,16 @@ int length(LINKEDLIST * list){
   return list->length;
 }
 void insert(LINKEDLIST * list, void * val){ /*Will work if HEAD is NULL*/
+  /*printf("start of insert");
   NODE * newNode = malloc(sizeof(NODE));
   newNode->obj = val;
   newNode->next = '\0';
+  printf("new node created");
   NODE * tail = list->head + sizeof(NODE)*(list->length-1);
   tail->next = newNode;
   list->length++;
+  printf("end of insert");
+  */
  }
 NODE * deleteIndex(NODE * head, int index){
 }
