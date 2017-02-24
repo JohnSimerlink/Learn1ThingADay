@@ -20,16 +20,25 @@ int length(LINKEDLIST * list){
   return list->length;
 }
 void insert(LINKEDLIST * list, void * val){ /*Will work if HEAD is NULL*/
-  /*printf("start of insert");
+  printf("start of insert");
   NODE * newNode = malloc(sizeof(NODE));
   newNode->obj = val;
   newNode->next = '\0';
   printf("new node created");
-  NODE * tail = list->head + sizeof(NODE)*(list->length-1);
-  tail->next = newNode;
+ 
+  if (list->length == 0){
+    list->head = newNode;
+  } else {
+    int addressOffset = 0;
+    addressOffset = sizeof(NODE)*(list->length - 1);
+    NODE * tail = list->head + addressOffset;
+    
+    tail->next = newNode;
+    
+  }
   list->length++;
   printf("end of insert");
-  */
+  /**/
  }
 NODE * deleteIndex(NODE * head, int index){
 }
@@ -37,6 +46,9 @@ NODE * deleteIndex(NODE * head, int index){
 void removeDuplicates(NODE * head){
 
 }
-/*
-void print(NODE* head){
-} */
+
+void print(LINKEDLIST * list){
+  printf("print called");
+  (list->printNodeFunction)(list->head);
+  
+}

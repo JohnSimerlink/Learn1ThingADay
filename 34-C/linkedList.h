@@ -15,4 +15,4 @@ int length(LINKEDLIST * list);
 void insert(LINKEDLIST * list, void* val);
 NODE * deleteIndex(NODE * head, int index);
 void removeDuplicates(NODE * head);
-void print(NODE* head);
+void print(LINKEDLIST * list);
