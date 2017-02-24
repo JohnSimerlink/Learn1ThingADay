@@ -49,6 +49,6 @@ void removeDuplicates(NODE * head){
 
 void print(LINKEDLIST * list){
   printf("print called");
- /* (list->printNodeFunction)(list->head);*/
+  list->printNodeFunction(list->head->obj);
   
 }

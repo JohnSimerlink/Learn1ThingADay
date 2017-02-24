@@ -7,7 +7,7 @@ typedef struct linkedList {
   int nodeSize; /*numBytes*/
   int length;
   void * comparatorFunction;
-  void * printNodeFunction;
+  void (*printNodeFunction)(void *);
 } LINKEDLIST;
 
 LINKEDLIST * init(int nodeSize, void* comparator, void* printNode);
