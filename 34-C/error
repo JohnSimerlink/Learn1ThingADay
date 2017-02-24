@@ -1,0 +1,11 @@
+gcc -c intLinkedList.c linkedList.h 
+gcc -c linkedList.c linkedList.h
+linkedList.c: In function ‘insert’:
+linkedList.c:27:41: error: invalid operands to binary * (have ‘long unsigned int’ and ‘int (*)(struct LINKEDLIST *)’)
+   NODE * tail = list->head+=sizeof(NODE)*(length-1);
+                                         ^
+linkedList.c: At top level:
+linkedList.c:37:1: error: unterminated comment
+ /*
+ ^
+make: *** [linkedList.o] Error 1

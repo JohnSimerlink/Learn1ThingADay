@@ -1,16 +1,21 @@
-
 /*
  * * C program to create a linked list and display the element in the list
  * */
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
-#include "linkedList.h"
+#include "linkedlist.h"
 
-struct linkedList * init(int nodeSize, void* comparatorFunction, void* printNode){
+LINKEDLIST * init(int nodeSize, void* comparator, void* printNode);
+void insert(NODE * head, int val);
+NODE * deleteIndex(NODE * head, int index);
+void removeDuplicates(NODE * head);
+void print(NODE* head);
+
+LINKEDLIST * init(int nodeSize, void* comparator, void* printNode){
   LINKEDLIST * list = malloc(sizeof(LINKEDLIST));
   list->nodeSize = nodeSize;
-  list->comparatorFunction = comparatorFunction;
+  list->comparator = comparatorFunction;
   list->printNodeFunction = printNode;
   list->head = NULL;
   list->length = 0;
@@ -22,8 +27,8 @@ int length(LINKEDLIST * list){
 void insert(LINKEDLIST * list, void * val){ /*Will work if HEAD is NULL*/
   NODE * newNode = malloc(sizeof(NODE));
   newNode->obj = val;
-  newNode->next = '\0';
-  NODE * tail = list->head + sizeof(NODE)*(list->length-1);
+  newNode->next = null;
+  NODE * tail = list->head+=sizeof(NODE)*(length-1);
   tail->next = newNode;
   list->length++;
  }
@@ -33,6 +38,6 @@ NODE * deleteIndex(NODE * head, int index){
 void removeDuplicates(NODE * head){
 
 }
-/*
+
 void print(NODE* head){
-} */
+}

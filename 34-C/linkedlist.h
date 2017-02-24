@@ -4,15 +4,15 @@ typedef struct node {
 } NODE;
 typedef struct linkedList {
   NODE * head;
-  int nodeSize; /*numBytes*/
+  int size; /*numBytes*/
   int length;
   void * comparatorFunction;
   void * printNodeFunction;
 } LINKEDLIST;
 
 LINKEDLIST * init(int nodeSize, void* comparator, void* printNode);
-int length(LINKEDLIST * list);
-void insert(LINKEDLIST * list, void* val);
+int length(LINKEDLIST * list){
+void insert(NODE * head, int val);
 NODE * deleteIndex(NODE * head, int index);
 void removeDuplicates(NODE * head);
 void print(NODE* head);
