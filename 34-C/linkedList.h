@@ -4,6 +4,7 @@ typedef struct node {
 } NODE;
 typedef struct linkedList {
   NODE * head;
+  NODE * tail;
   int nodeSize; /*numBytes*/
   int length;
   void * comparatorFunction;
@@ -13,6 +14,6 @@ typedef struct linkedList {
 LINKEDLIST * init(int nodeSize, void* comparator, void* printNode);
 int length(LINKEDLIST * list);
 void insert(LINKEDLIST * list, void* val);
-NODE * deleteIndex(NODE * head, int index);
+NODE * deleteIndex(LINKEDLIST * list, int index);
 void removeDuplicates(NODE * head);
 void print(LINKEDLIST * list);

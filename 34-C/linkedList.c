@@ -14,33 +14,42 @@ struct linkedList * init(int nodeSize, void* comparatorFunction, void* printNode
   list->printNodeFunction = printNode;
   list->head = NULL;
   list->length = 0;
+  list->tail = NULL;
   return list;
 }
 int length(LINKEDLIST * list){
   return list->length;
 }
 void insert(LINKEDLIST * list, void * val){ /*Will work if HEAD is NULL*/
-  printf("start of insert");
+  printf("start of insert\n");
   NODE * newNode = malloc(sizeof(NODE));
   newNode->obj = val;
   newNode->next = '\0';
-  printf("new node created");
+  printf("new node created\n");
  
   if (list->length == 0){
     list->head = newNode;
+    list->tail = newNode;
   } else {
-    int addressOffset = 0;
-    addressOffset = sizeof(NODE)*(list->length - 1);
-    NODE * tail = list->head + addressOffset;
-    
-    tail->next = newNode;
+    list->tail->next = newNode;
+    list->tail = newNode;
     
   }
   list->length++;
-  printf("end of insert");
-  /**/
- }
-NODE * deleteIndex(NODE * head, int index){
+}
+
+NODE * deleteIndex(LINKEDLIST * list, int index){
+  int i = 0;
+  NODE * traversalNode = list->head;
+  NODE * delNode;
+  for(i=0;i<index-1;i++){
+    traversalNode = traversalNode->next;
+  }
+  delNode = traversalNode->next;
+  traversalNode->next = delNode->next;
+  list->length--;
+  delNode->next = NULL;
+  return delNode;
 }
 
 void removeDuplicates(NODE * head){
@@ -48,7 +57,13 @@ void removeDuplicates(NODE * head){
 }
 
 void print(LINKEDLIST * list){
-  printf("print called");
-  list->printNodeFunction(list->head->obj);
+  NODE * temp = list->head;
+  int i;
+  for(i = 0; i < list->length; i++){
+    list->printNodeFunction(temp->obj);
+    printf("->");
+    temp=temp->next;
+  }
+  printf("NULL\n");
   
 }

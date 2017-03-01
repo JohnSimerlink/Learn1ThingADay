@@ -9,25 +9,28 @@ int main() {
   LINKEDLIST * list = init(4, 0, printInt_ptr);
   printf("%p\n\n", myFunc);
 
-  void (*myFunc_ptr)(void *)= &myFunc;
+  /*void (*myFunc_ptr)(void *)= &myFunc;
   int num3 = 55555;
-  (*myFunc_ptr)((void *) &num3);
+  (*myFunc_ptr)((void *) &num3);*/
 
   int num = 5;
   int num2 = 22;
+  int num3 = 535;
   int * num1pointer = &num;
   insert(list, (void *) &num);
-  insert(list, (void *) &num);
   insert(list, (void *) &num2);
-  printf("%d", length(list));
+  insert(list, (void *) &num3);
+  printf("%d\n", length(list));
   print(list);
 
+  printInt(deleteIndex(list, 1)->obj);
+  printf("\nWe just deleteda node\n");
+  print(list);
 
 }
 
 
 void printInt(void * bits){
-  printf("called");
   int * val = (int *) bits;
   printf("%d", *val);
 }
