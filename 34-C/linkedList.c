@@ -21,11 +21,9 @@ int length(LINKEDLIST * list){
   return list->length;
 }
 void insert(LINKEDLIST * list, void * val){ /*Will work if HEAD is NULL*/
-  printf("start of insert\n");
   NODE * newNode = malloc(sizeof(NODE));
   newNode->obj = val;
   newNode->next = '\0';
-  printf("new node created\n");
  
   if (list->length == 0){
     list->head = newNode;
@@ -52,7 +50,33 @@ NODE * deleteIndex(LINKEDLIST * list, int index){
   return delNode;
 }
 
-void removeDuplicates(NODE * head){
+void removeDuplicates(LINKEDLIST * list){
+
+  int i;
+  int j;
+  int compare;
+
+  NODE * temp = list->head;
+  NODE * temp2;
+  i = 0;
+  while (temp != NULL){
+    j = i+1;
+    temp2 = temp->next;
+    while(temp2 != NULL){
+      printf("about to compare\n");
+      compare = list->comparatorFunction(temp->obj, temp2->obj);
+      printf("just finished comparing: %d\n",compare);
+      temp2 = temp2->next;      
+      if (compare == 0){ 
+        deleteIndex(list, j);
+        j--;
+      }
+      j++;
+    }
+    i++;
+    temp = temp->next;
+
+  }
 
 }
 
