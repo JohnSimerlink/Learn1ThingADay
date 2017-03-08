@@ -16,4 +16,5 @@ int length(LINKEDLIST * list);
 void insert(LINKEDLIST * list, void* val);
 NODE * deleteIndex(LINKEDLIST * list, int index);
 void removeDuplicates(LINKEDLIST * head);
+NODE * kthFromLast(int k, LINKEDLIST * list);
 void print(LINKEDLIST * list);

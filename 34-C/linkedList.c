@@ -79,6 +79,21 @@ void removeDuplicates(LINKEDLIST * list){
   }
 
 }
+/*CTCI 2.2 : IMplement an alogrithm to find the kth to last element of a singly linked list */
+/*TODO INDEX CHECKING*/
+NODE * kthFromLast(int k, LINKEDLIST * list){
+  NODE * front = list->head;
+  NODE * back = list->head;
+  while(k--) {
+    back = back->next;
+  }
+  while (back->next != NULL){
+    front = front->next;
+    back = back->next;
+  }
+  return front;
+}
+
 
 void print(LINKEDLIST * list){
   NODE * temp = list->head;
@@ -88,6 +103,6 @@ void print(LINKEDLIST * list){
     printf("->");
     temp=temp->next;
   }
-  printf("NULL\n");
-  
+  printf("NULL\n");  
 }
+

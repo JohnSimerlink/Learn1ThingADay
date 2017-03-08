@@ -29,6 +29,13 @@ int main() {
   removeDuplicates(list);
   print(list);
 
+  /*2.2 kth to last */
+  printf("\nSECOND FROM LAST\n");
+  NODE * secondFromLast = kthFromLast(2,list);
+  printInt(secondFromLast->obj);
+  printf("\nEND SECOND FROM LAST\n");
+  printf("=================END INTEGER SECTION============\n\n");
+  printf("\n\n=================START DOUBLE SECTION============\n\n");
   LINKEDLIST * dList = init(4, &doubleComparator, &printDouble);
   double d1 = 1.0;
   double d2 = 2.5;
@@ -47,12 +54,13 @@ int main() {
   printf("length:%d\n", length(dList));
   print(dList);
 
-  printInt(deleteIndex(dList, 1)->obj);
+  printDouble(deleteIndex(dList, 1)->obj);
   printf("\nWe just deleteda node\n");
   print(dList);
   printf("\nDELETING DUPS\n");
   removeDuplicates(dList);
   print(dList);
+
 }
 
 void printDouble(void * val_ptr){

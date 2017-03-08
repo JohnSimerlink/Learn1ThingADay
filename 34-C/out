@@ -1,0 +1,62 @@
+0x400c69
+
+length:7
+22->5->535->5->22->5->535->NULL
+5
+We just deleteda node
+22->535->5->22->5->535->NULL
+
+DELETING DUPS
+about to compare
+just finished comparing: -513
+about to compare
+just finished comparing: 17
+about to compare
+just finished comparing: 0
+about to compare
+just finished comparing: 17
+about to compare
+just finished comparing: -513
+about to compare
+just finished comparing: 530
+about to compare
+just finished comparing: 530
+about to compare
+just finished comparing: 0
+about to compare
+just finished comparing: 0
+22->535->5->NULL
+
+SECOND FROM LAST
+22
+END SECOND FROM LAST
+=================END INTEGER SECTION============
+
+
+
+=================START DOUBLE SECTION============
+
+length:8
+1.000000->2.500000->0.000000->0.500000->1.000000->2.500000->0.000000->0.500000->NULL
+2.500000
+We just deleteda node
+1.000000->0.000000->0.500000->1.000000->2.500000->0.000000->0.500000->NULL
+
+DELETING DUPS
+about to compare
+just finished comparing: 1
+about to compare
+just finished comparing: 0
+about to compare
+just finished comparing: 0
+about to compare
+just finished comparing: -1
+about to compare
+just finished comparing: 1
+about to compare
+just finished comparing: 0
+about to compare
+just finished comparing: -2
+about to compare
+just finished comparing: 0
+1.000000->0.000000->2.500000->NULL
