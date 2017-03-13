@@ -12,16 +12,12 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* Box-sizing border-box */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-
-/*some default styles to make each box visible */
-
 .box {
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   padding: 10px;
   text-align: center;
   text-shadow: 4px 4px 0 rgba(0,0,0,.1);
-  /* Colours for each box */
 }
 
 .box1 { background:#1abc9c;}
@@ -37,43 +33,62 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 .container {
   display: flex;
-  border:10px solid mistyrose;
+  flex-wrap: wrap;
+  flex-direction: column;
   height: 100vh;
-  align-items: flex-end;
-  flex-direction:row-reverse;
 }
 
-.box1 {
-  font-size: 3px;
-}
+/*some default styles to make each box visible */
 
+.box {
+  flex-basis: 200px;
+  flex-grow: 1;
+  /*width:30%;
+  /* Colours for each box */
+}
+.box2{
+  padding-bottom: 0px;
+}
 .box3 {
-  font-size: 150px;
+  flex-grow: 5;
 }
+.box4 {
+  flex-basis: 100px;
+}
+.box6{
+/*  padding-bottom: 50px;
+*/}
 
-.box4{
-  font-size: 200px;
-}
-
-.box5 {
-  font-size: 70px;
-}
 </style>
 </head>
 <body>
   <div class="container">
-    <div class="box box1">1</div>
-    <div class="box box2">2</div>
-    <div class="box box3">3</div>
-    <div class="box box4">4</div>
-    <div class="box box5">5</div>
-    <div class="box box6">6</div>
-    <div class="box box7">7</div>
-    <div class="box box8">8</div>
-    <div class="box box9">9</div>
-    <div class="box box10">10</div>
+    <div class="box box1">one 😎</div>
+    <div class="box box2">two 🍕</div>
+    <div class="box box3">three 🍟</div>
+    <div class="box box4">four 👍</div>
+    <div class="box box5">five 👀</div>
+    <div class="box box6">six 💩</div> <div class="box box1">one 😎</div>
+    <div class="box box2">two 🍕</div>
+    <div class="box box3">three 🍟</div>
+    <div class="box box4">four 👍</div>
+    <div class="box box5">five 👀</div>
+    <div class="box box6">six 💩</div> <div class="box box1">one 😎</div>
+    <div class="box box2">two 🍕</div>
+    <div class="box box3">three 🍟</div>
+    <div class="box box4">four 👍</div>
+    <div class="box box5">five 👀</div>
+    <div class="box box6">six 💩</div> <div class="box box1">one 😎</div>
+    <div class="box box2">two 🍕</div>
+    <div class="box box3">three 🍟</div>
+    <div class="box box4">four 👍</div>
+    <div class="box box5">five 👀</div>
+    <div class="box box6">six 💩</div> <div class="box box1">one 😎</div>
+    <div class="box box2">two 🍕</div>
+    <div class="box box3">three 🍟</div>
+    <div class="box box4">four 👍</div>
+    <div class="box box5">five 👀</div>
+    <div class="box box6">six 💩</div>
   </div>
 </body>
 </html>
-
- 
