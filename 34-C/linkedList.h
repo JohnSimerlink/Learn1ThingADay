@@ -18,3 +18,5 @@ NODE * deleteIndex(LINKEDLIST * list, int index);
 void removeDuplicates(LINKEDLIST * head);
 NODE * kthFromLast(int k, LINKEDLIST * list);
 void print(LINKEDLIST * list);
+void reverse(LINKEDLIST * list);
+void reverseLastHalf(NODE * head); /* reverse last half of list, just given a pointer to the head */

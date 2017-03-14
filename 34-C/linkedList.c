@@ -106,3 +106,61 @@ void print(LINKEDLIST * list){
   printf("NULL\n");  
 }
 
+void reverse(LINKEDLIST * list){
+  
+}
+//1 2 | 3 4 -> 1 2 | 4 3
+//1 2 | 3 4 5 -> 1 2 | 5 4 3
+void reverseLastHalf(NODE * head){ /* reverse last half of list, just given a pointer to the head */
+  //We can break up list into the left side and right side. boundary denoted by | 
+  //0. Calculate length, for use in later steps
+  int length;
+  NODE * tmp = head;
+  while (tmp != NULL) {
+    length++;
+    tmp = tmp->next;
+  }
+  //1. Get and store the last leftNode
+  NODE * lastLeft;
+  //Using 1-based indexing, for even length lists, lastLeft will be the ath node where a = length / 2
+  //For odd length lists, lastLeft will also be ath node where a = length / 2
+  //Since we have a pointer to the first node, we only need to jump to the next node a - 1 times;
+  int a = length / 2;
+  tmp = head;
+  int i;
+  for(i = 0; i < a - 1; i++){
+    tmp = tmp->next;
+  }
+  lastLeft = temp;
+  //2. Get and store the first rightNode
+  NODE * firstRight = lastLeft->next;
+
+  //3. Reverse right half
+  int numNodesOnRight =  length - length / 2;
+  //1 2 | 3 4 5 -> 1 2 | 5        3 4 5
+  //1 2 | 5     3 4 5 - > 1 2 | 5 4...          3 4 5
+  //1 2 | 5 4..    3 4 5 -> 1 2 | 5 4 3... 3 4 5 
+  //1 2 | 5 4 3... 3 4 5 -> 1 2 | 5 4 3
+  //
+
+  //1 2 | 3 4
+  //1 2 | 4
+  //1 2 | 4 3
+  tmp = lastLeft;
+  for (i = 0; i < numNodesOnRight; i++){
+    tmp->next = KForward(firstRight, numnodesOnRight - i - 1); 
+    tmp = tmp->next;
+  }
+  firstRight->next = NULL; // firstRight is now the last right, so we have to make it's next node null;
+  return head;
+  
+}
+//TODO: also do a recursive solution for above method
+
+//0 returns node
+NODE * KForward(NODE * node, int k) {
+  while(k--){
+    node = node->next;
+  }
+  return node;
+}
