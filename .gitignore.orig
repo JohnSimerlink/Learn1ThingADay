@@ -1,0 +1,7 @@
+*.swp
+<<<<<<< b61cddd2a09a9166bc8cb58332b8a8a1d113a474
+*node_modules*
+=======
+*.sw*
+*.vim
+>>>>>>> alias vg='vi .gitignore '
