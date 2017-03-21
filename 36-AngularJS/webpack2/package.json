@@ -4,9 +4,16 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start":"webpack-dev-server --hot --host 0.0.0.0",
+    "start": "webpack-dev-server --hot --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.3",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "css-loader": "^0.27.3"
+  }
 }
