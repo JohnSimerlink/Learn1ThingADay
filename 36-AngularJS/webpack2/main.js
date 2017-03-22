@@ -1,5 +1,10 @@
+import './main.css'; //require('./main.css');
+//import jquery from './node_modules/jquery/dist/jquery.js'
+import jQuery from 'jquery'
+require('jquery')
+require('bootstrap')
 import angular from 'angular';
-require('./main.css');
-//require('node_modules/bootstrap/dist/css/bootstrap.css');
-document.write('well....... hello xworld');
-angular.module('app', []);
+import routing from './app.config';
+document.write('it taoirstensrdoaien            was the beginning');
+angular.module('app', ['ui-router', 'home'])
+  .config(routing);
