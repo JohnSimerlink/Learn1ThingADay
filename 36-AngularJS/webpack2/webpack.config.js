@@ -1,4 +1,5 @@
 var path = require('path')
+var webpack = require('webpack')
 module.exports = {
   entry: {
     app: ['./main.js']
@@ -13,6 +14,15 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.js$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
+      }
+      , {
+        test: /\.html$/
+        , use: ['html-loader']
       }
     ]
   }

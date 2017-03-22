@@ -1,10 +1,10 @@
 import angular from 'angular'
-import ui-router from 'angular-router'
+import uirouter from 'angular-ui-router'
 
-import HomeController from './src/features/home/home.controller'
-import HomeRoutes from './src/features/home/home.routes'
+import HomeController from './home.controller.js'
+import routing from './home.routes'
 
-export default angular.module('app.home', [ui-router])
+export default angular.module('app.home', [uirouter])
   .config(routing)
   .controller('HomeController', HomeController)
   .name
