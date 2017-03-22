@@ -5,7 +5,7 @@ export default function routes($stateProvider) {
     state('home', {
       url: '/'
       , template: require('./home.html')
-      , controller: 'HomeController'
+      , controller: 'HomeController' //does angular, or the routes plugin, somehow instantiate an object of my controller?
       , controllerAs: 'home'
     })
 }
