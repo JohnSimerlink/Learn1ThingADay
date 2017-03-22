@@ -3,6 +3,7 @@ import uirouter from 'angular-ui-router'
 
 import HomeController from './home.controller.js'
 import routing from './home.routes'
+import './home.css'
 
 export default angular.module('app.home', [uirouter])
   .config(routing)

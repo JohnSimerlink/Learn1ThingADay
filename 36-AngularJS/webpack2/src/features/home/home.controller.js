@@ -3,6 +3,6 @@ export default class HomeController{
     this.name="World";
   }
   changeName(){
-    this.name="angular-tips";
+    this.name="Mars";
   }
 }
