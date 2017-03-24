@@ -1,3 +1,4 @@
+/*
 var path = require('path')
 var webpack = require('webpack')
 module.exports = {
@@ -26,4 +27,8 @@ module.exports = {
       }
     ]
   }
-};
+}; */
+module.exports = require('./webpack.make'){
+  BUILD: false,
+  TEST: false
+})

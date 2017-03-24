@@ -2,6 +2,7 @@ import angular from 'angular'
 
 class RandomNames {
   constructor() {
+    console.log("new RandomNames class created. it and its type are", this, typeof(this))
     this.names = ['John', 'Elisa', 'Mark', 'Annie']
   }
 

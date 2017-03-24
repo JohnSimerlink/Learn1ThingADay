@@ -56,7 +56,6 @@ int main(){
   }
   pthread_mutex_unlock(&lock);
 
-
   printf("END OF SECTION TWO");
   pthread_join(longThreadP, NULL);
  return 0;
