@@ -1,4 +1,4 @@
-/*styles in src/style folder are applied to whole page*/
+/* styles in src/style directory are applied to the whole page */
 body {
   background: #0147A7;
   color: #fff;
@@ -17,6 +17,6 @@ main {
 }
 
 footer {
-  text-align:center;
+  text-align: center;
   font-size: 0.8em;
 }
