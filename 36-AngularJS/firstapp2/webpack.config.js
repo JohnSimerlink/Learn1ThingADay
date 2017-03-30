@@ -9,7 +9,7 @@ module.exports = function makeWebpackConfig() {
       app: './src/app/app.js'
     },
     output: {
-      publicPath: 'http://simer.link:8080/'
+      publicPath: 'https://simer.link:8080/'
     },
     module: {
       rules: [{

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "webpack-dev-server --history-api-fallback --inline --progress --host 0.0.0.0"
+    "server": "webpack-dev-server --history-api-fallback --hot --progress --host 0.0.0.0 --https"
   },
   "author": "JohnSimerlink",
   "license": "ISC",
