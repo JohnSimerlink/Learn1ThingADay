@@ -1,5 +1,6 @@
 import angular from 'angular';
 
+import createevent from './directives/createevent.directive'
 import '../style/app.css';
 
 let app = () => {
@@ -18,7 +19,7 @@ class AppCtrl {
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [])
+angular.module(MODULE_NAME, [createevent])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl);
 
